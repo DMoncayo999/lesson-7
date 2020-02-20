@@ -4,14 +4,14 @@ let imagesToLoad = document.querySelectorAll('img[data-src]');
 const loadImages = (image) => {
   image.setAttribute('src', image.getAttribute('data-src'));
   image.onload = () => {
-    image.removeAttribute('data-src');
+  image.removeAttribute('data-src');
   };
 };
 
 function init() {
 
 if('IntersectionObserver' in window) {
-  console.log('IntersectionObserver');
+  //console.log('IntersectionObserver');
   let options = {
     rootMargin: '0px',
     threshold: 0.7
@@ -19,7 +19,7 @@ if('IntersectionObserver' in window) {
   
   const observer = new IntersectionObserver( (items, observer) => {
     items.forEach((item) => {
-      console.log("item.target", item)
+     // console.log("item.target", item)
       if(item.isIntersecting) {
         loadImages(item.target);
         observer.unobserve(item.target);
@@ -30,7 +30,7 @@ if('IntersectionObserver' in window) {
     observer.observe(img);
   });
 } else {
-  console.log('No support IntersectionObserver'); 
+ // console.log('No support IntersectionObserver'); 
   imagesToLoad.forEach((img) => {
     loadImages(img);
   });
