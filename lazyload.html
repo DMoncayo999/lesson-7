@@ -11,25 +11,16 @@
 
 <link href="css/normalize.css" rel="stylesheet">
 <link href="css/small.css" rel="stylesheet">
-
      
 </head>
 <body>
-    <main>
-       <h1>Progressive Loading (Images)</h1>
-       <picture class="flowercolm">
-        <img src="images/butterfly300.jpg" alt="flower and butterfly"> 
-        <img src="images/colorflowers300.jpg" alt="diverse colorful flowers"> 
-        <img src="images/pinktulip300.jpg" alt="pink tulip">      
-        <img src="images/roses300.jpg"alt="pink roses"> 
-        <img src="images/sunflower300.jpg" alt="sunflower"> 
-        <img src="images/blueflowers300.jpg" alt="blue and yellow daisies"> 
-    </picture>
-    </main>   
-
-    <footer>
-        &copy; 2020  Delfina Moncayo 
-    </footer>
-
+    <h1>Progressive Loading (Images)</h1>
+    <img src="images/placeholder.png" data-src="images/butterfly300.jpg" alt="flower and butterfly" />   
+    <img src="images/placeholder.png" data-src="images/pinktulip300.jpg" alt="pink tulip" /> 
+    <img src="images/placeholder.png" data-src="images/colorflowers300.jpg" alt="different color flowers" />     
+    <img src="images/placeholder.png" data-src="images/roses300.jpg"alt="pink roses" />
+    <img src="images/placeholder.png" data-src="images/sunflower300.jpg" alt="sunflower" />
+    <img src="images/placeholder.png" data-src="images/blueflowers300.jpg" alt="blue and yellow daisies" />
 </body>
 </html>
+<script src="js/lazypic.js"></script>
